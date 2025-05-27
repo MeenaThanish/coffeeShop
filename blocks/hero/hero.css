@@ -35,3 +35,92 @@
     padding: 40px 32px;
   }
 }
+#the-cafe{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 90px;
+  font-family: "Inconsolata", sans-serif;
+  font-weight: 100;
+  line-height: 135px;
+  width: 180px;
+  text-transform: lowercase;
+  margin: 0;
+}
+.herobanner-full-height-banner-container{
+  position: relative;
+}
+@media (width < 768px) {
+  #open-from-6am-to-5pm{
+    display: none !important;
+  }
+}
+#open-from-6am-to-5pm, #adr-street-5015{
+  margin: 0;
+  position: absolute;
+  bottom: 60px;
+  background-color: #000;
+  color: #fff;
+  display: inline-block;
+  padding-left: 8px;
+  padding-right: 8px;
+  text-align: center;
+  font-family: "Inconsolata", sans-serif;
+  font-weight: 100;
+}
+#adr-street-5015{   background-color:transparent; right: 20px;}
+.about-container{
+  max-width: 700px;
+  margin: 0 auto !important;
+}
+.about-container .default-content-wrapper{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+.default-content-wrapper p strong, .default-content-wrapper  p strong em {
+  display: contents;
+}
+.about-container h3{
+  background-color: #000;
+    color: #fff;
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    font-weight: 400;
+    font-family: "Segoe UI", Arial, sans-serif;
+    letter-spacing: 4px;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin:74px 0;
+    width: fit-content;
+}
+.about-container #use-products-from-nature-for-what-its-worth---but-never-too-early-nor-too-late-fresh-is-the-new-sweet,
+#chef-coffeeist-and-owner-liam-brown{
+    background-color: #f1f1f1 !important;
+    text-align: left;
+    color: #000 !important;
+    text-transform: math-auto;
+    font-style: italic;
+    margin: 0;
+    padding: 20px;
+    border-left: 6px solid #ccc !important;
+    letter-spacing: normal;
+    width: 93%;
+}
+#chef-coffeeist-and-owner-liam-brown{margin-bottom: 16px;}
+.about-container p{
+    font-family: "Inconsolata", sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.about-container > p:last-child{
+  margin-bottom: 20px !important;
+}
