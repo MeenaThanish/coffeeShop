@@ -6,7 +6,7 @@ header .nav-wrapper {
   position: fixed;
 }
 header nav a:hover {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 header nav {
   box-sizing: border-box;
