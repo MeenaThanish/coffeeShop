@@ -5,7 +5,9 @@ header .nav-wrapper {
   z-index: 2;
   position: fixed;
 }
-
+header nav a:hover {
+    text-decoration: none;
+}
 header nav {
   box-sizing: border-box;
   display: grid;
