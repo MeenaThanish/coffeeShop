@@ -15,24 +15,34 @@ document.addEventListener("DOMContentLoaded", function () {
     starElements.forEach(star => {
       star.addEventListener("mouseover", () => {
         const val = parseInt(star.dataset.value);
-        highlightStars(val);
+        updateClasses(val, true);
       });
 
       star.addEventListener("mouseout", () => {
-        highlightStars(selectedRating);
+        updateClasses(selectedRating, false);
       });
 
       star.addEventListener("click", () => {
         selectedRating = parseInt(star.dataset.value);
         ratingText.textContent = `Rating: ${selectedRating}`;
-        highlightStars(selectedRating);
+        updateClasses(selectedRating, false);
       });
     });
 
-    function highlightStars(rating) {
+    function updateClasses(rating, isHovering) {
       starElements.forEach(star => {
         const val = parseInt(star.dataset.value);
-        star.style.color = val <= rating ? "gold" : "#ccc";
+        if (val <= rating) {
+          star.classList.add("selected");
+          if (isHovering) {
+            star.classList.add("hover");
+          } else {
+            star.classList.remove("hover");
+          }
+        } else {
+          star.classList.remove("selected");
+          star.classList.remove("hover");
+        }
       });
     }
   }
