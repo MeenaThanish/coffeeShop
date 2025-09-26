@@ -1,6 +1,13 @@
-
+<script>
 window.onload = function () {
   const ratingBlock = document.querySelector(".rating.block");
+
+  // Hide the label "star-rating"
+  const labelPara = ratingBlock?.querySelector("div:first-child p");
+  if (labelPara) {
+    labelPara.style.display = "none";
+  }
+
   const starCode = ratingBlock?.querySelectorAll("p code")[0];
   const ratingText = ratingBlock?.querySelectorAll("p code")[1];
 
@@ -44,3 +51,4 @@ window.onload = function () {
     }
   }
 };
+</script>
