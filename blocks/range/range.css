@@ -1,11 +1,51 @@
+
+/* Range Slider Container */
 .range-slider-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: Arial, sans-serif;
+    width: 300px;
+    margin: 20px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
 }
 
-input[type="range"] {
-  width: 200px;
-  accent-color: #0078D4;
+/* Label styling */
+.range-slider-label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Slider styling */
+.range-slider {
+    width: 100%;
+    height: 25px;
+    background: #f0f0f0;
+    border-radius: 5px;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+/* Slider thumb styling */
+.range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #0078D4;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.range-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #0078D4;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+/* Display value styling */
+.range-value {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #333;
 }
