@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", function () {
+
+window.onload = function () {
   const ratingBlock = document.querySelector(".rating.block");
   const starCode = ratingBlock?.querySelectorAll("p code")[0];
   const ratingText = ratingBlock?.querySelectorAll("p code")[1];
@@ -32,18 +33,14 @@ document.addEventListener("DOMContentLoaded", function () {
     function updateClasses(rating, isHovering) {
       starElements.forEach(star => {
         const val = parseInt(star.dataset.value);
+        star.classList.remove("hover", "selected");
         if (val <= rating) {
           star.classList.add("selected");
           if (isHovering) {
             star.classList.add("hover");
-          } else {
-            star.classList.remove("hover");
           }
-        } else {
-          star.classList.remove("selected");
-          star.classList.remove("hover");
         }
       });
     }
   }
-});
+};
