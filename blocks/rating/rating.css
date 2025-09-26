@@ -1,21 +1,13 @@
-.star-rating {
-  direction: rtl;
-  display: inline-flex;
-}
-
-.star-rating input {
-  display: none;
-}
-
-.star-rating label {
+<style>
+.star {
   font-size: 2rem;
   color: #ccc;
   cursor: pointer;
-  transition: color 0.2s;
+  transition: color 0.2s ease;
 }
 
-.star-rating input:checked ~ label,
-.star-rating label:hover,
-.star-rating label:hover ~ label {
+.star.hover,
+.star.selected {
   color: gold;
 }
+</style>
