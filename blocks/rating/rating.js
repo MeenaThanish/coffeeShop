@@ -1,8 +1,10 @@
-
 window.onload = function () {
   const ratingBlock = document.querySelector(".rating.block");
-  const starCode = ratingBlock?.querySelectorAll("p code")[0];
-  const ratingText = ratingBlock?.querySelectorAll("p code")[1];
+
+  // Get the <code> elements inside <p>
+  const codeBlocks = ratingBlock?.querySelectorAll("p code");
+  const starCode = codeBlocks?.[0];
+  const ratingText = codeBlocks?.[1];
 
   if (starCode && ratingText) {
     const stars = starCode.textContent.trim().split(" ");
