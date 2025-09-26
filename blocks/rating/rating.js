@@ -1,25 +1,18 @@
-<script>
 document.addEventListener("DOMContentLoaded", function () {
   const ratingBlock = document.querySelector(".rating.block");
+  const starCode = ratingBlock?.querySelectorAll("p code")[0];
+  const ratingText = ratingBlock?.querySelectorAll("p code")[1];
 
-  if (ratingBlock) {
-    const starContainer = document.createElement("div");
-    starContainer.className = "star-rating";
-
-    for (let i = 1; i <= 5; i++) {
-      const star = document.createElement("span");
-      star.className = "star";
-      star.dataset.value = i;
-      star.innerHTML = "&#9733;";
-      starContainer.appendChild(star);
-    }
-
-    ratingBlock.appendChild(starContainer);
-
-    const stars = starContainer.querySelectorAll(".star");
+  if (starCode && ratingText) {
+    const stars = starCode.textContent.trim().split(" ");
     let selectedRating = 0;
 
-    stars.forEach(star => {
+    // Replace text with span elements
+    starCode.innerHTML = stars.map((_, i) => `<span class="star" data-value="${i + 1}">&#9733;</span>`).join(" ");
+
+    const starElements = starCode.querySelectorAll(".star");
+
+    starElements.forEach(star => {
       star.addEventListener("mouseover", () => {
         const val = parseInt(star.dataset.value);
         highlightStars(val);
@@ -31,15 +24,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
       star.addEventListener("click", () => {
         selectedRating = parseInt(star.dataset.value);
+        ratingText.textContent = `Rating: ${selectedRating}`;
         highlightStars(selectedRating);
-        console.log("Selected Rating:", selectedRating);
       });
     });
 
     function highlightStars(rating) {
-      stars.forEach(star => {
+      starElements.forEach(star => {
         const val = parseInt(star.dataset.value);
-        star.classList.toggle("selected", val <= rating);
+        star.style.color = val <= rating ? "gold" : "#ccc";
       });
     }
   }
