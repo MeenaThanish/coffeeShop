@@ -1,0 +1,11 @@
+.range-slider-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: Arial, sans-serif;
+}
+
+input[type="range"] {
+  width: 200px;
+  accent-color: #0078D4;
+}
