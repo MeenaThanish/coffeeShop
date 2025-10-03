@@ -12,7 +12,7 @@ body{
     max-width: 1200px;
     margin: 100px auto;
 }
-.container{
+.timeline > div{
     position: relative;
     padding: 10px 40px;
     width: 50%;
@@ -56,17 +56,17 @@ linear forwards;
     border-radius: 6px;
     font-size: 15px;
 }
-.container img{
+.timeline > div > div > picture{
     position: absolute;
     width: 40px;
     border-radius: 50%;
     top: 32px;
     z-index: 10;
 }
-.right-container img{
+.timeline > div:nth-child(even) picture{
     left:-20px;
 }
-.left-container img{
+.timeline > div:nth-child(odd) picture{
     right:-20px;
 }
 .timeline::after{
