@@ -1,14 +1,12 @@
 window.addEventListener("load", function () {
-  const timelineBlock = document.querySelector(".timeline.block");
-  if (!timelineBlock) return;
+  const timeline = document.querySelector(".timeline");
+  if (!timeline) return;
 
-  const timelineItems = Array.from(timelineBlock.children);
+  const childDivs = Array.from(timeline.children);
 
-  timelineItems.forEach((item, index) => {
-    item.classList.add("container");
-    if (index % 2 === 0) {
-      item.classList.add("left-container");
-    } else {
-      item.classList.add("right-container");
+  childDivs.forEach((div, index) => {
+    if (index % 2 === 0) { // odd in human terms: 1st, 3rd, 5th...
+      div.classList.add("container", "left-container");
     }
   });
+});
