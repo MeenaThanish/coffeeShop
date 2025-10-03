@@ -117,7 +117,7 @@ body{
     content: "";
     position: absolute;
     top: 20px;
-    right: 45px;
+    right: 25px;
     width: 0;
     height: 0;
     border-top: 10px solid transparent;
@@ -128,7 +128,7 @@ body{
     content: "";
     position: absolute;
     top: 20px;
-    left: -15px;
+    left: 26px;
     width: 0;
     height: 0;
     border-top: 10px solid transparent;
