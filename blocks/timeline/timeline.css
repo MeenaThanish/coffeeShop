@@ -119,22 +119,22 @@ linear forwards;
     border-right: 15px solid white;
     left: -14px;
 }
-.container:nth-child(1){
+.timeline > div:nth-child(1){
     animation-delay: 1s;
 }
-.container:nth-child(2){
+.timeline > div:nth-child(2){
     animation-delay: 2s;
 }
-.container:nth-child(3){
+.timeline > div:nth-child(3){
     animation-delay: 3s;
 }
-.container:nth-child(4){
+.timeline > div:nth-child(4){
     animation-delay: 4s;
 }
-.container:nth-child(5){
+.timeline > div:nth-child(5){
     animation-delay: 5s;
 }
-.container:nth-child(6){
+.timeline > div:nth-child(6){
     animation-delay: 6s;
 }
 
