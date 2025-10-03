@@ -113,6 +113,28 @@ body{
     border-right: 15px solid white;
     left: -14px;
 }
+.timeline.block > div:nth-child(odd)::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid white;
+}
+.timeline.block > div:nth-child(even)::before {   
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: -15px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 15px solid white;
+}
 .timeline > div:nth-child(1){
     animation-delay: 0s;
 }
