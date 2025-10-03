@@ -12,13 +12,6 @@ body{
     max-width: 1200px;
     margin: 100px auto;
 }
-.timeline > div{
-    position: relative;
-    padding: 10px 40px;
-    width: 50%;
-    animation: movedown 1s linear forwards;
-    opacity: 0;
-}
 @keyframes movedown{
     0%{
         opacity: 1;
@@ -145,7 +138,7 @@ linear forwards;
     .timeline::after{
         left: 31px;
     }
-    .container{
+    .timeline > div{
         width: 100%;
         padding-left: 80px;
         padding-right: 25px;
@@ -156,10 +149,10 @@ linear forwards;
     .text-box small{
         margin-bottom: 10px;
     }
-    .right-container{
+    .timeline > div:nth-child(odd){
         left: 0;
     }
-    .left-container img, .right-container img{
+    .timeline > div:nth-child(odd) img, .timeline > div:nth-child(even) img{
         left: 10px;
     }
     .left-conatiner-arrow, .right-container-arrow{
