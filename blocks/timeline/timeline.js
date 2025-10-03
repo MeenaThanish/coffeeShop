@@ -2,13 +2,13 @@ window.addEventListener("load", function () {
   const timelineBlock = document.querySelector(".timeline.block");
   if (!timelineBlock) return;
 
-  const childDivs = timelineBlock.querySelectorAll(":scope > div");
+  const timelineItems = Array.from(timelineBlock.children);
 
-  childDivs.forEach((div, index) => {
-    if (index % 2 === 0) { // odd in human terms (1st, 3rd, 5th...)
-      div.classList.add("container", "left-container");
+  timelineItems.forEach((item, index) => {
+    item.classList.add("container");
+    if (index % 2 === 0) {
+      item.classList.add("left-container");
     } else {
-      div.classList.add("container", "right-container");
+      item.classList.add("right-container");
     }
   });
-});
