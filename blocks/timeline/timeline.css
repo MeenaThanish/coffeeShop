@@ -141,9 +141,9 @@ linear forwards;
     }
     .timeline > div{
         width: 100%;
-        padding-left: 80px;
+        padding-left: 60px;
         padding-right: 25px;
-        left: 0;
+        left: 0 !important;
     }
     .text-box{
         font-size: 13px;
@@ -154,7 +154,7 @@ linear forwards;
     .right-container{
         left: 0;
     }
-    .timeline > div > picture{
+    .timeline > div:nth-child(odd) picture, .timeline > div:nth-child(even) picture {
         left: 10px;
     }
     .left-conatiner-arrow, .right-container-arrow{
