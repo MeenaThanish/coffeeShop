@@ -3,10 +3,10 @@
     var timelineBlock = document.querySelector(".timeline.block");
     if (!timelineBlock) return;
 
-    var timelineItems = timelineBlock.children;
+    var timelineItems = timelineBlock.querySelectorAll(":scope > div");
 
     for (var i = 0; i < timelineItems.length; i++) {
-      if (timelineItems[i].nodeType === 1 && i % 2 === 0) {
+      if (i % 2 === 0) { // odd-numbered in human terms
         timelineItems[i].classList.add("container", "left-container");
       }
     }
