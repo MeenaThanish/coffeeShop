@@ -12,6 +12,12 @@ body{
     max-width: 1200px;
     margin: 100px auto;
 }
+.timeline > div {
+    position: relative;
+    padding: 10px 40px;
+    width: 50%;
+    animation: movedown 1s linear forwards;
+}
 @keyframes movedown{
     0%{
         opacity: 1;
@@ -29,13 +35,7 @@ body{
     border-radius: 6px;
     font-size: 15px;
 }
-.timeline > div {
-    position: relative;
-    padding: 10px 40px;
-    width: 50%;
-    animation: movedown 1s 
-linear forwards;
-}
+
 .timeline > div:nth-child(odd){
     left: 0;
 }
