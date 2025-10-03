@@ -183,6 +183,10 @@ body{
     .timeline.block > div:nth-child(even)::before{
         left: 46px;
     }
+    .timeline.block > div:nth-child(odd)::before{
+        left: 46px;
+        transform: rotate(180deg);
+    }
     h2{
         font-size: 20px;
     }
