@@ -140,8 +140,9 @@ linear forwards;
     }
     .timeline > div{
         width: 100%;
-        padding-left: 80px;
+        padding-left: 60px;
         padding-right: 25px;
+        left: 0 !important;
     }
     .text-box{
         font-size: 13px;
