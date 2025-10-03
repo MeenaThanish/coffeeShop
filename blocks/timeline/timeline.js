@@ -1,14 +1,13 @@
 <script>
   window.onload = function () {
-    var timeline = document.querySelector(".timeline");
-    if (!timeline) return;
+    var timelineBlock = document.querySelector(".timeline.block");
+    if (!timelineBlock) return;
 
-    var childDivs = timeline.querySelectorAll("div");
+    var timelineItems = timelineBlock.children;
 
-    for (var i = 0; i < childDivs.length; i++) {
-      // Check if the div is a direct child of .timeline
-      if (childDivs[i].parentElement === timeline && i % 2 === 0) {
-        childDivs[i].classList.add("container", "left-container");
+    for (var i = 0; i < timelineItems.length; i++) {
+      if (timelineItems[i].nodeType === 1 && i % 2 === 0) {
+        timelineItems[i].classList.add("container", "left-container");
       }
     }
   };
