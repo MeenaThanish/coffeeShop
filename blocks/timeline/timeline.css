@@ -131,7 +131,8 @@ linear forwards;
     animation-delay: 6s;
 }
 
-/* @media screen and (max-width: 600px) {
+
+@media screen and (max-width: 600px) {
     .timeline{
         margin: 50px auto;
     }
@@ -140,9 +141,8 @@ linear forwards;
     }
     .timeline > div{
         width: 100%;
-        padding-left: 60px;
+        padding-left: 80px;
         padding-right: 25px;
-        left: 0 !important;
     }
     .text-box{
         font-size: 13px;
@@ -150,10 +150,10 @@ linear forwards;
     .text-box small{
         margin-bottom: 10px;
     }
-    .timeline > div:nth-child(odd){
+    .right-container{
         left: 0;
     }
-    .timeline > div:nth-child(odd) img, .timeline > div:nth-child(even) img{
+    .timeline > div > picture{
         left: 10px;
     }
     .left-conatiner-arrow, .right-container-arrow{
@@ -161,4 +161,4 @@ linear forwards;
         border-left: 0;
         left: -15px;
     }
-} */
+}
