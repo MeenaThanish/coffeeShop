@@ -1,10 +1,14 @@
-
 window.addEventListener("load", function () {
-  const timelineBlocks = document.querySelectorAll(".timeline > div");
+  const timelineBlock = document.querySelector(".timeline.block");
+  if (!timelineBlock) return;
 
-  timelineBlocks.forEach((block, index) => {
-    if (index % 2 === 0) { // 0-based index: 0, 2, 4... are odd in human terms
-      block.classList.add("container", "left-container");
+  const childDivs = timelineBlock.querySelectorAll(":scope > div");
+
+  childDivs.forEach((div, index) => {
+    if (index % 2 === 0) { // odd in human terms (1st, 3rd, 5th...)
+      div.classList.add("container", "left-container");
+    } else {
+      div.classList.add("container", "right-container");
     }
   });
 });
