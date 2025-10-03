@@ -180,10 +180,8 @@ body{
     .timeline > div:nth-child(odd) picture, .timeline > div:nth-child(even) picture {
         left: 10px;
     }
-    .left-conatiner-arrow, .right-container-arrow{
-        border-right: 15px solid white;
-        border-left: 0;
-        left: -15px;
+    .timeline.block > div:nth-child(even)::before{
+        left: 46px;
     }
     h2{
         font-size: 20px;
