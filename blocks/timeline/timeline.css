@@ -131,7 +131,7 @@ linear forwards;
     animation-delay: 6s;
 }
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
     .timeline{
         margin: 50px auto;
     }
@@ -161,4 +161,4 @@ linear forwards;
         border-left: 0;
         left: -15px;
     }
-}
+} */
