@@ -85,6 +85,26 @@ body{
     }
 
 }
+@keyframes borderHighlight {
+    0% {
+        border-color: #00aaff;
+        box-shadow: 0 0 10px #00aaff;
+    }
+    100% {
+        border-color: #585959;
+        box-shadow: none;
+    }
+}
+
+main img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    border: 3px solid #585959;
+    border-radius: 100%;
+    animation: borderHighlight 1s ease-out;
+}
+
 .text-box h2{
     font-weight: 600;
 }
