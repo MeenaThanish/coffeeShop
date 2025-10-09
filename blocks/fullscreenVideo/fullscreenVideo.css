@@ -1,0 +1,19 @@
+body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .fullscreenvideo-container {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .button-container {
+      margin-bottom: 20px;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
